@@ -75,7 +75,7 @@ export function Hero() {
                 <Wallet className="h-4 w-4 text-purple" aria-hidden="true" />
               </div>
               <div className="mt-4 h-2 rounded-full bg-purple/10">
-                <div className="h-2 w-[68%] rounded-full bg-gradient-to-r from-purple to-pink" />
+                <div className="h-2 w-[68%] rounded-full bg-gradient-to-r from-crimson via-rose-flame to-spiced-orange" />
               </div>
               <p className="mt-3 text-xs text-muted">$18k estimated for 120 guests</p>
             </div>

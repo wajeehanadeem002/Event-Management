@@ -67,7 +67,7 @@ body {
     radial-gradient(circle at 14% 18%, rgba(242, 75, 106, 0.18), transparent 28%),
     radial-gradient(circle at 82% 12%, rgba(242, 116, 5, 0.16), transparent 26%),
     radial-gradient(circle at 76% 78%, rgba(140, 3, 28, 0.14), transparent 30%),
-    linear-gradient(135deg, #fff8f6 0%, #fff1ed 45%, #fff8f6 100%);
+    linear-gradient(135deg, #fff8f6 0%, #f3d9d6 52%, #ffffff 100%);
 }
 
 .glass-panel {
@@ -81,14 +81,14 @@ body {
   background:
     radial-gradient(circle at 0% 0%, rgba(242, 75, 106, 0.14), transparent 34%),
     radial-gradient(circle at 100% 0%, rgba(242, 116, 5, 0.16), transparent 30%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72));
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 248, 246, 0.78));
 }
 
 .cta-gradient {
   background:
     linear-gradient(135deg, rgba(242, 116, 5, 0.18), transparent 28%),
     linear-gradient(315deg, rgba(242, 107, 107, 0.2), transparent 32%),
-    linear-gradient(135deg, #2c1e1e 0%, #8c031c 52%, #f24b6a 100%);
+    linear-gradient(135deg, #2c1e1e 0%, #8c031c 44%, #f24b6a 72%, #f27405 100%);
 }
 
 .form-field {

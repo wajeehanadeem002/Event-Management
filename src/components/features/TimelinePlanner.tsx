@@ -29,7 +29,7 @@ export function TimelinePlanner() {
 
       <div className="mt-5 h-2 rounded-full bg-white/10">
         <div
-          className="h-2 rounded-full bg-gradient-to-r from-gold via-peach to-pink transition-all"
+          className="h-2 rounded-full bg-gradient-to-r from-spiced-orange via-coral-blush to-rose-flame transition-all"
           style={{ width: `${progress}%` }}
         />
       </div>
