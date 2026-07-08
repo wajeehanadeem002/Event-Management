@@ -22,7 +22,7 @@ export function EventCategories() {
             <Reveal key={category.slug} delay={index * 0.05}>
               <Link
                 href={`/themes?category=${category.slug}`}
-                className="group relative block min-h-[360px] overflow-hidden rounded-[2rem] bg-foreground shadow-[0_24px_70px_rgba(31,24,46,0.16)]"
+                className="group relative block min-h-[360px] overflow-hidden rounded-[2rem] bg-foreground shadow-[0_24px_70px_rgba(44,30,30,0.16)]"
               >
                 <Image
                   src={category.image}

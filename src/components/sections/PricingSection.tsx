@@ -22,8 +22,8 @@ export function PricingSection() {
                 className={cn(
                   "h-full rounded-[2rem] bg-white p-7 ring-1 ring-purple/10 transition",
                   plan.highlighted
-                    ? "relative -mt-3 shadow-[0_28px_90px_rgba(109,63,209,0.18)] ring-purple/25"
-                    : "shadow-[0_18px_60px_rgba(109,63,209,0.08)]",
+                    ? "relative -mt-3 shadow-[0_28px_90px_rgba(140,3,28,0.16)] ring-purple/25"
+                    : "shadow-[0_18px_60px_rgba(140,3,28,0.08)]",
                 )}
               >
                 {plan.highlighted ? (

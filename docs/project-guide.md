@@ -51,14 +51,15 @@ src/
 
 Palette:
 
-- Lavender `#BFA2DB`
-- Royal Purple `#6D3FD1`
-- Rose Pink `#F472B6`
-- Peach `#FDBA9A`
-- Soft Gold `#F4C95D`
-- Mint `#A7F3D0`
-- Ink `#21182F`
-- Background `#FFFAFB`
+- Primary Crimson `#8C031C`
+- Rose Flame `#F24B6A`
+- Olive Grove `#718C49`
+- Spiced Orange `#F27405`
+- Coral Blush `#F26B6B`
+- Primary Text `#2C1E1E`
+- Secondary Text `#6B5A5A`
+- Border `#F3D9D6`
+- Background `#FFF8F6`
 
 Typography:
 

@@ -25,7 +25,7 @@ export function VendorDirectory() {
 
   return (
     <div className="grid gap-8">
-      <div className="rounded-[2rem] bg-white p-4 shadow-[0_18px_60px_rgba(109,63,209,0.08)] ring-1 ring-purple/10">
+      <div className="rounded-[2rem] bg-white p-4 shadow-[0_18px_60px_rgba(140,3,28,0.08)] ring-1 ring-purple/10">
         <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
           <label className="relative block">
             <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted" />

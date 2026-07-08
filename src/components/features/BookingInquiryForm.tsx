@@ -63,7 +63,7 @@ export function BookingInquiryForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="rounded-[2rem] bg-white p-6 shadow-[0_24px_70px_rgba(109,63,209,0.14)] ring-1 ring-purple/10"
+      className="rounded-[2rem] bg-white p-6 shadow-[0_24px_70px_rgba(140,3,28,0.12)] ring-1 ring-purple/10"
     >
       <div className="grid gap-5 md:grid-cols-2">
         <Field label="Full name" error={errors.name?.message}>

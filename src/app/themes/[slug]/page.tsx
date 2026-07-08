@@ -49,7 +49,7 @@ export default async function ThemeDetailPage({
             </ButtonLink>
           </div>
         </div>
-        <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] shadow-[0_30px_90px_rgba(109,63,209,0.2)]">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] shadow-[0_30px_90px_rgba(140,3,28,0.18)]">
           <Image
             src={theme.image}
             alt={theme.title}

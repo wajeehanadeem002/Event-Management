@@ -55,7 +55,7 @@ export function Hero() {
               fill
               priority
               sizes="(max-width: 1024px) 90vw, 42vw"
-              className="rounded-[2.5rem] object-cover shadow-[0_30px_90px_rgba(109,63,209,0.22)]"
+              className="rounded-[2.5rem] object-cover shadow-[0_30px_90px_rgba(140,3,28,0.2)]"
             />
             <div className="absolute -left-4 top-10 rounded-3xl bg-white/90 p-4 shadow-2xl backdrop-blur sm:-left-8">
               <div className="flex items-center gap-3">

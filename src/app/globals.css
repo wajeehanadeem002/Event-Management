@@ -1,18 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fffafb;
-  --foreground: #21182f;
+  --background: #fff8f6;
+  --foreground: #2c1e1e;
   --surface: #ffffff;
-  --muted: #766b83;
-  --lavender: #bfa2db;
-  --purple: #6d3fd1;
-  --pink: #f472b6;
-  --peach: #fdba9a;
-  --gold: #f4c95d;
-  --mint: #a7f3d0;
-  --border: rgba(109, 63, 209, 0.14);
-  --shadow-soft: 0 24px 80px rgba(109, 63, 209, 0.16);
+  --muted: #6b5a5a;
+  --border: #f3d9d6;
+  --crimson: #8c031c;
+  --rose-flame: #f24b6a;
+  --olive-grove: #718c49;
+  --spiced-orange: #f27405;
+  --coral-blush: #f26b6b;
+  --lavender: #f3d9d6;
+  --purple: var(--crimson);
+  --pink: var(--rose-flame);
+  --peach: var(--coral-blush);
+  --gold: var(--spiced-orange);
+  --mint: var(--olive-grove);
+  --shadow-soft: 0 24px 80px rgba(140, 3, 28, 0.14);
 }
 
 @theme inline {
@@ -26,6 +31,11 @@
   --color-peach: var(--peach);
   --color-gold: var(--gold);
   --color-mint: var(--mint);
+  --color-crimson: var(--crimson);
+  --color-rose-flame: var(--rose-flame);
+  --color-olive-grove: var(--olive-grove);
+  --color-spiced-orange: var(--spiced-orange);
+  --color-coral-blush: var(--coral-blush);
   --font-sans: var(--font-geist-sans);
   --font-serif: var(--font-display);
 }
@@ -45,7 +55,7 @@ body {
 }
 
 ::selection {
-  background: rgba(244, 114, 182, 0.3);
+  background: rgba(242, 75, 106, 0.24);
 }
 
 .text-balance {
@@ -54,10 +64,10 @@ body {
 
 .premium-gradient {
   background:
-    radial-gradient(circle at 14% 18%, rgba(244, 114, 182, 0.22), transparent 28%),
-    radial-gradient(circle at 82% 12%, rgba(244, 201, 93, 0.22), transparent 26%),
-    radial-gradient(circle at 76% 78%, rgba(109, 63, 209, 0.18), transparent 30%),
-    linear-gradient(135deg, #fffafb 0%, #fff7ed 42%, #f5f3ff 100%);
+    radial-gradient(circle at 14% 18%, rgba(242, 75, 106, 0.18), transparent 28%),
+    radial-gradient(circle at 82% 12%, rgba(242, 116, 5, 0.16), transparent 26%),
+    radial-gradient(circle at 76% 78%, rgba(140, 3, 28, 0.14), transparent 30%),
+    linear-gradient(135deg, #fff8f6 0%, #fff1ed 45%, #fff8f6 100%);
 }
 
 .glass-panel {
@@ -69,23 +79,23 @@ body {
 
 .mesh-card {
   background:
-    radial-gradient(circle at 0% 0%, rgba(244, 114, 182, 0.16), transparent 34%),
-    radial-gradient(circle at 100% 0%, rgba(244, 201, 93, 0.18), transparent 30%),
+    radial-gradient(circle at 0% 0%, rgba(242, 75, 106, 0.14), transparent 34%),
+    radial-gradient(circle at 100% 0%, rgba(242, 116, 5, 0.16), transparent 30%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72));
 }
 
 .cta-gradient {
   background:
-    linear-gradient(135deg, rgba(244, 201, 93, 0.16), transparent 28%),
-    linear-gradient(315deg, rgba(244, 114, 182, 0.18), transparent 32%),
-    linear-gradient(135deg, #21182f 0%, #362052 48%, #6d3fd1 100%);
+    linear-gradient(135deg, rgba(242, 116, 5, 0.18), transparent 28%),
+    linear-gradient(315deg, rgba(242, 107, 107, 0.2), transparent 32%),
+    linear-gradient(135deg, #2c1e1e 0%, #8c031c 52%, #f24b6a 100%);
 }
 
 .form-field {
   min-height: 3rem;
   width: 100%;
   border-radius: 1rem;
-  border: 1px solid rgba(109, 63, 209, 0.12);
+  border: 1px solid rgba(243, 217, 214, 0.95);
   background: var(--background);
   padding: 0 1rem;
   font-size: 0.875rem;
@@ -95,7 +105,7 @@ body {
 }
 
 .form-field:focus {
-  box-shadow: 0 0 0 4px rgba(109, 63, 209, 0.18);
+  box-shadow: 0 0 0 4px rgba(242, 75, 106, 0.18);
 }
 
 .no-scrollbar::-webkit-scrollbar {

@@ -18,7 +18,7 @@ export function TimelinePlanner() {
   const progress = useMemo(() => Math.round((done.length / tasks.length) * 100), [done]);
 
   return (
-    <div className="rounded-[2rem] bg-foreground p-6 text-white shadow-[0_24px_70px_rgba(31,24,46,0.18)]">
+    <div className="rounded-[2rem] bg-foreground p-6 text-white shadow-[0_24px_70px_rgba(44,30,30,0.18)]">
       <div className="flex items-center justify-between gap-4">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Timeline planner</p>

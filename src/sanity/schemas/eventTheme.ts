@@ -41,7 +41,7 @@ export const eventTheme = defineType({
       title: "Palette",
       type: "array",
       of: [{ type: "string" }],
-      description: "Store hex values such as #BFA2DB.",
+      description: "Store hex values such as #8C031C, #F24B6A, or #F27405.",
     }),
     defineField({
       name: "gallery",

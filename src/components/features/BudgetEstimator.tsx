@@ -32,7 +32,7 @@ export function BudgetEstimator() {
   }, [decor, eventType, food, guests, music, photo]);
 
   return (
-    <div className="rounded-[2rem] bg-white p-6 shadow-[0_24px_70px_rgba(109,63,209,0.14)] ring-1 ring-purple/10">
+    <div className="rounded-[2rem] bg-white p-6 shadow-[0_24px_70px_rgba(140,3,28,0.12)] ring-1 ring-purple/10">
       <div className="flex items-center justify-between gap-4">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-purple">Budget estimator</p>

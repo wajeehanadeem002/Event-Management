@@ -30,7 +30,7 @@ export function ThemeShowcase({ limit = 3 }: { limit?: number }) {
             <Reveal key={theme.slug} delay={index * 0.06}>
               <Link
                 href={`/themes/${theme.slug}`}
-                className="group block overflow-hidden rounded-[2rem] bg-background ring-1 ring-purple/10 transition hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(109,63,209,0.16)]"
+                className="group block overflow-hidden rounded-[2rem] bg-background ring-1 ring-purple/10 transition hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(140,3,28,0.14)]"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image

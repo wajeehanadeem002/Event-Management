@@ -36,7 +36,7 @@ export const eventCategory = defineType({
       name: "colorTheme",
       title: "Color Theme",
       type: "string",
-      description: "Example: lavender, peach, gold, rose, mint",
+      description: "Example: crimson, rose flame, olive grove, spiced orange, coral blush",
     }),
     defineField({
       name: "coverImage",
