@@ -1,9 +1,31 @@
 import { ThemeShowcase } from "@/components/sections/ThemeShowcase";
+import { WeddingCollections } from "@/components/sections/WeddingCollections";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { eventThemes } from "@/lib/site-data";
 
-export default function ThemesPage() {
+type ThemesPageProps = {
+  searchParams: Promise<{ category?: string | string[] }>;
+};
+
+export default async function ThemesPage({ searchParams }: ThemesPageProps) {
+  const category = (await searchParams).category;
+  const selectedCategory = Array.isArray(category) ? category[0] : category;
+  const isWeddingCategory = selectedCategory === "weddings" || selectedCategory === "wedding";
+
+  if (isWeddingCategory) {
+    return (
+      <>
+        <PageHero
+          eyebrow="Wedding collections"
+          title="Explore wedding moments from dholki to walima."
+          description="Browse visual inspiration for each wedding event with dedicated imagery from the celebration flow."
+        />
+        <WeddingCollections />
+      </>
+    );
+  }
+
   return (
     <>
       <PageHero
