@@ -30,7 +30,7 @@ export function Hero() {
             <Sparkles className="h-4 w-4" aria-hidden="true" />
             Premium event planning workspace
           </div>
-          <h1 className="mx-auto mt-5 max-w-4xl font-serif text-3xl font-semibold leading-[1.04] text-white [text-shadow:0_8px_36px_rgba(0,0,0,0.35)] sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="mx-auto mt-5 max-w-4xl font-serif text-2xl font-semibold leading-[1.05] text-white [text-shadow:0_8px_36px_rgba(0,0,0,0.35)] sm:text-3xl md:text-4xl lg:text-5xl">
             <span className="block">Plan unforgettable events</span>
             <span className="block">with themes, vendors,</span>
             <span className="block">budgets, and timelines.</span>
