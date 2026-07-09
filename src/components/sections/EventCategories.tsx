@@ -15,6 +15,7 @@ export function EventCategories() {
           eyebrow="Event categories"
           title="Browse celebrations by mood, format, and planning needs."
           description="Each category can become a CMS-powered landing page with curated themes, vendor shortlists, planning tasks, and inspiration galleries."
+          titleClassName="text-3xl sm:text-4xl"
         />
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
