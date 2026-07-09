@@ -38,6 +38,19 @@
   --color-coral-blush: var(--coral-blush);
   --font-sans: var(--font-geist-sans);
   --font-serif: var(--font-display);
+  --text-xs: 0.6875rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.0625rem;
+  --text-xl: 1.125rem;
+  --text-2xl: 1.35rem;
+  --text-3xl: 1.6875rem;
+  --text-4xl: 2rem;
+  --text-5xl: 2.7rem;
+  --text-6xl: 3.375rem;
+  --text-7xl: 4.05rem;
+  --text-8xl: 5.4rem;
+  --text-9xl: 7.2rem;
 }
 
 * {
@@ -51,6 +64,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
+  font-size: var(--text-base);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
@@ -104,7 +118,7 @@ body {
   border: 1px solid rgba(243, 217, 214, 0.95);
   background: var(--background);
   padding: 0 1rem;
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--foreground);
   outline: none;
