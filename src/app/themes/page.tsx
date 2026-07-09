@@ -90,11 +90,31 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
   if (isBabyShowerCategory) {
     return (
       <>
-        <PageHero
-          eyebrow="Baby shower collections"
-          title="Explore baby shower ideas by palette, setting, and guest moments."
-          description="Browse baby shower inspiration with soft decor, brunch setups, welcome signs, and family-friendly celebration details."
-        />
+        <section className="relative overflow-hidden bg-foreground pt-32 pb-20 text-white sm:pt-36 sm:pb-24">
+          <Image
+            src="/babyshower-hero-section.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="absolute inset-0 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-foreground/68 via-foreground/40 to-foreground/78" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/28 to-foreground/48" aria-hidden="true" />
+          <Container className="relative z-10">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-white/80">
+                Baby shower collections
+              </p>
+              <h1 className="font-serif text-3xl font-semibold leading-tight text-white [text-shadow:0_8px_36px_rgba(0,0,0,0.35)] sm:text-4xl lg:text-5xl">
+                Explore baby shower ideas by palette, setting, and guest moments.
+              </h1>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/82 sm:text-lg">
+                Browse baby shower inspiration with soft decor, brunch setups, welcome signs, and family-friendly celebration details.
+              </p>
+            </div>
+          </Container>
+        </section>
         <BabyShowerCollections />
       </>
     );
