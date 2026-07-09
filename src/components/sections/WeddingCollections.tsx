@@ -6,36 +6,42 @@ import { Reveal } from "@/components/ui/Reveal";
 const weddingCollections = [
   {
     title: "Dholki",
+    badge: "PRE-WEDDING",
     image: "/dholki.jpg",
     description: "Warm music-night inspiration with colorful seating, lights, and family moments.",
     accent: "from-spiced-orange to-coral-blush",
   },
   {
     title: "Mayoon",
+    badge: "PRE-WEDDING",
     image: "/mayoon.jpg",
     description: "Soft yellow celebration styling with intimate decor and pre-wedding rituals.",
     accent: "from-spiced-orange to-olive-grove",
   },
   {
     title: "Mehndi",
+    badge: "PRE-WEDDING",
     image: "/mehndi.jpg",
     description: "Vibrant mehndi boards with floral details, festive stages, and playful palettes.",
     accent: "from-olive-grove to-rose-flame",
   },
   {
     title: "Nikkah",
+    badge: "CEREMONY",
     image: "/nikkah.jpg",
     description: "Elegant ceremony inspiration with graceful details and refined romantic styling.",
     accent: "from-crimson to-rose-flame",
   },
   {
     title: "Barat",
+    badge: "RECEPTION",
     image: "/barat.jpg",
     description: "Grand entrance and reception concepts with dramatic color, decor, and lighting.",
     accent: "from-rose-flame to-spiced-orange",
   },
   {
     title: "Walima",
+    badge: "RECEPTION",
     image: "/walima.jpg",
     description: "Polished walima layouts with luxe tables, soft florals, and evening ambience.",
     accent: "from-coral-blush to-crimson",
@@ -61,7 +67,7 @@ export function WeddingCollections() {
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/75 via-foreground/10 to-transparent" />
                   <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-foreground backdrop-blur">
                     <Sparkles className="h-3.5 w-3.5 text-rose-flame" aria-hidden="true" />
-                    Wedding
+                    {collection.badge}
                   </div>
                   <h2 className="absolute bottom-4 left-4 right-4 font-serif text-4xl font-semibold text-white">
                     {collection.title}
