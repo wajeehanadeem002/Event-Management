@@ -69,11 +69,11 @@ body {
     linear-gradient(180deg, rgba(242, 75, 106, 0.24) 0%, rgba(255, 248, 246, 0.9) 48%, rgba(113, 140, 73, 0.22) 100%);
 }
 
-.hero-gradient-dark {
+.hero-gradient-matcha {
   background:
-    radial-gradient(circle at 18% 14%, rgba(214, 41, 135, 0.62), transparent 34%),
-    radial-gradient(circle at 82% 86%, rgba(134, 41, 156, 0.68), transparent 38%),
-    linear-gradient(180deg, #d62987 0%, #b82b94 48%, #86299c 100%);
+    radial-gradient(circle at 18% 14%, rgba(255, 248, 246, 0.28), transparent 34%),
+    radial-gradient(circle at 82% 86%, rgba(103, 6, 38, 0.1), transparent 36%),
+    linear-gradient(180deg, #bad797 0%, #bad797 100%);
 }
 
 .glass-panel {
