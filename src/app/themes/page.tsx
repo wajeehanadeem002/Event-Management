@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BirthdayCollections } from "@/components/sections/BirthdayCollections";
 import { ThemeShowcase } from "@/components/sections/ThemeShowcase";
 import { WeddingCollections } from "@/components/sections/WeddingCollections";
 import { Container } from "@/components/ui/Container";
@@ -13,6 +14,7 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
   const category = (await searchParams).category;
   const selectedCategory = Array.isArray(category) ? category[0] : category;
   const isWeddingCategory = selectedCategory === "weddings" || selectedCategory === "wedding";
+  const isBirthdayCategory = selectedCategory === "birthdays" || selectedCategory === "birthday";
 
   if (isWeddingCategory) {
     return (
@@ -43,6 +45,19 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
           </Container>
         </section>
         <WeddingCollections />
+      </>
+    );
+  }
+
+  if (isBirthdayCategory) {
+    return (
+      <>
+        <PageHero
+          eyebrow="Birthday collections"
+          title="Explore birthday ideas by theme, setting, and celebration style."
+          description="Browse birthday inspiration from indoor setups to character and car theme party concepts."
+        />
+        <BirthdayCollections />
       </>
     );
   }
