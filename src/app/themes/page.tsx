@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BabyShowerCollections } from "@/components/sections/BabyShowerCollections";
 import { BirthdayCollections } from "@/components/sections/BirthdayCollections";
 import { ThemeShowcase } from "@/components/sections/ThemeShowcase";
 import { WeddingCollections } from "@/components/sections/WeddingCollections";
@@ -15,6 +16,10 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
   const selectedCategory = Array.isArray(category) ? category[0] : category;
   const isWeddingCategory = selectedCategory === "weddings" || selectedCategory === "wedding";
   const isBirthdayCategory = selectedCategory === "birthdays" || selectedCategory === "birthday";
+  const isBabyShowerCategory =
+    selectedCategory === "baby-showers" ||
+    selectedCategory === "baby-shower" ||
+    selectedCategory === "babyshower";
 
   if (isWeddingCategory) {
     return (
@@ -78,6 +83,19 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
           </Container>
         </section>
         <BirthdayCollections />
+      </>
+    );
+  }
+
+  if (isBabyShowerCategory) {
+    return (
+      <>
+        <PageHero
+          eyebrow="Baby shower collections"
+          title="Explore baby shower ideas by palette, setting, and guest moments."
+          description="Browse baby shower inspiration with soft decor, brunch setups, welcome signs, and family-friendly celebration details."
+        />
+        <BabyShowerCollections />
       </>
     );
   }
