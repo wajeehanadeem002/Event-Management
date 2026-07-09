@@ -128,8 +128,16 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
     return (
       <>
         <section className="relative overflow-hidden bg-foreground pt-32 pb-20 text-white sm:pt-36 sm:pb-24">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(242,75,106,0.36),transparent_34%),linear-gradient(135deg,#670626_0%,#8C031C_40%,#2C1E1E_100%)]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-foreground/12 via-transparent to-foreground/36" aria-hidden="true" />
+          <Image
+            src="/anniversary-hero-section.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="absolute inset-0 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/42 to-foreground/78" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/72 via-foreground/30 to-foreground/48" aria-hidden="true" />
           <Container className="relative z-10">
             <div className="mx-auto max-w-4xl text-center">
               <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-white/80">
