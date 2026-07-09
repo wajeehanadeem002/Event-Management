@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { eventThemes } from "@/lib/site-data";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function ThemeShowcase({ limit = 3 }: { limit?: number }) {
   const themes = eventThemes.slice(0, limit);
@@ -12,20 +11,7 @@ export function ThemeShowcase({ limit = 3 }: { limit?: number }) {
   return (
     <section className="bg-white py-20 sm:py-28">
       <Container>
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <SectionHeading
-            align="left"
-            eyebrow="Theme showcase"
-            title="Curated event directions with mood, palette, and budget context."
-            description="Theme collections can be powered by Sanity and become the visual heart of the product."
-            className="max-w-2xl"
-          />
-          <Link href="/themes" className="inline-flex items-center gap-2 font-bold text-purple">
-            View all themes <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </Link>
-        </div>
-
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3">
           {themes.map((theme, index) => (
             <Reveal key={theme.slug} delay={index * 0.06}>
               <Link
