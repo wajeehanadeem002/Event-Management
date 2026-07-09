@@ -68,7 +68,7 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
               <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-white/80">
                 Birthday collections
               </p>
-              <h1 className="font-serif text-4xl font-semibold leading-tight text-white [text-shadow:0_8px_36px_rgba(0,0,0,0.35)] sm:text-5xl">
+              <h1 className="font-serif text-3xl font-semibold leading-tight text-white [text-shadow:0_8px_36px_rgba(0,0,0,0.35)] sm:text-4xl lg:text-5xl">
                 Explore birthday ideas by theme, setting, and celebration style.
               </h1>
               <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/82 sm:text-lg">
