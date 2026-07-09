@@ -3,6 +3,7 @@ import { AnniversaryCollections } from "@/components/sections/AnniversaryCollect
 import { BabyShowerCollections } from "@/components/sections/BabyShowerCollections";
 import { BirthdayCollections } from "@/components/sections/BirthdayCollections";
 import { CorporateCollections } from "@/components/sections/CorporateCollections";
+import { EngagementCollections } from "@/components/sections/EngagementCollections";
 import { ThemeShowcase } from "@/components/sections/ThemeShowcase";
 import { WeddingCollections } from "@/components/sections/WeddingCollections";
 import { Container } from "@/components/ui/Container";
@@ -18,6 +19,7 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
   const selectedCategory = Array.isArray(category) ? category[0] : category;
   const isWeddingCategory = selectedCategory === "weddings" || selectedCategory === "wedding";
   const isBirthdayCategory = selectedCategory === "birthdays" || selectedCategory === "birthday";
+  const isEngagementCategory = selectedCategory === "engagements" || selectedCategory === "engagement";
   const isBabyShowerCategory =
     selectedCategory === "baby-showers" ||
     selectedCategory === "baby-shower" ||
@@ -87,6 +89,39 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
           </Container>
         </section>
         <BirthdayCollections />
+      </>
+    );
+  }
+
+  if (isEngagementCategory) {
+    return (
+      <>
+        <section className="relative overflow-hidden bg-foreground pt-32 pb-20 text-white sm:pt-36 sm:pb-24">
+          <Image
+            src="/engagement-hero-section.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="absolute inset-0 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/42 to-foreground/78" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/72 via-foreground/30 to-foreground/48" aria-hidden="true" />
+          <Container className="relative z-10">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-white/80">
+                Engagement collections
+              </p>
+              <h1 className="font-serif text-3xl font-semibold leading-tight text-white [text-shadow:0_8px_36px_rgba(0,0,0,0.35)] sm:text-4xl lg:text-5xl">
+                Explore engagement ideas for proposals, ring moments, and floral soirees.
+              </h1>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/82 sm:text-lg">
+                Browse engagement inspiration with romantic styling, family moments, refined decor, and photo-ready celebration details.
+              </p>
+            </div>
+          </Container>
+        </section>
+        <EngagementCollections />
       </>
     );
   }
