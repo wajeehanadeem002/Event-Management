@@ -12,17 +12,17 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-[#C85A70] bg-[#D86A7C] shadow-[0_10px_35px_rgba(44,30,30,0.12)]">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[#8A1637] bg-[#670626] shadow-[0_10px_35px_rgba(44,30,30,0.18)]">
       <Container className="flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" aria-label="Eventure home">
-          <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-foreground text-white shadow-lg">
+          <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/12 text-white shadow-lg ring-1 ring-white/20">
             <Sparkles className="h-5 w-5" aria-hidden="true" />
           </span>
           <span>
-            <span className="block font-serif text-2xl font-semibold leading-none text-foreground">
+            <span className="block font-serif text-2xl font-semibold leading-none text-white">
               Eventure
             </span>
-            <span className="block text-[0.68rem] font-bold uppercase tracking-[0.2em] text-muted">
+            <span className="block text-[0.68rem] font-bold uppercase tracking-[0.2em] text-white/70">
               Planning SaaS
             </span>
           </span>
@@ -33,7 +33,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-full px-4 py-2 text-sm font-semibold text-muted transition hover:bg-purple/10 hover:text-foreground"
+              className="rounded-full px-4 py-2 text-sm font-semibold text-white/75 transition hover:bg-white/10 hover:text-white"
             >
               {link.label}
             </Link>
@@ -62,7 +62,7 @@ export function Navbar() {
 
       <div
         className={cn(
-          "grid border-t border-[#C85A70] bg-[#D86A7C] transition-all duration-300 lg:hidden",
+          "grid border-t border-[#8A1637] bg-[#670626] transition-all duration-300 lg:hidden",
           isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
         )}
       >
@@ -73,7 +73,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="rounded-2xl px-4 py-3 text-base font-semibold text-foreground hover:bg-purple/10"
+                className="rounded-2xl px-4 py-3 text-base font-semibold text-white/80 hover:bg-white/10 hover:text-white"
               >
                 {link.label}
               </Link>
