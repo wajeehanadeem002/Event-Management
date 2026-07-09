@@ -50,8 +50,8 @@ export function Hero() {
         <Reveal delay={0.12} className="relative">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-lg">
             <Image
-              src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=80"
-              alt="Elegant outdoor event tablescape"
+              src="/hero-event-artwork.png"
+              alt="Illustrated luxury outdoor celebration with lights, decor, guests, and birthday table"
               fill
               priority
               sizes="(max-width: 1024px) 90vw, 42vw"
