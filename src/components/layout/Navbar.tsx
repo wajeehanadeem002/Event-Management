@@ -12,7 +12,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/60 bg-white/75 backdrop-blur-2xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[#D99B20] bg-[#F1B12B] shadow-[0_10px_35px_rgba(44,30,30,0.12)]">
       <Container className="flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" aria-label="Eventure home">
           <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-foreground text-white shadow-lg">
@@ -62,7 +62,7 @@ export function Navbar() {
 
       <div
         className={cn(
-          "grid border-t border-purple/10 bg-white/95 transition-all duration-300 lg:hidden",
+          "grid border-t border-[#D99B20] bg-[#F1B12B] transition-all duration-300 lg:hidden",
           isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
         )}
       >

@@ -12,17 +12,17 @@ const heroStats = [
 
 export function Hero() {
   return (
-    <section className="premium-gradient relative overflow-hidden pt-32 pb-20 sm:pt-36 lg:pt-40">
+    <section className="hero-gradient-dark relative overflow-hidden pt-32 pb-20 sm:pt-36 lg:pt-40">
       <Container className="grid items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
         <Reveal>
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/75 px-4 py-2 text-sm font-bold text-purple shadow-sm ring-1 ring-purple/10">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-bold text-white shadow-sm ring-1 ring-white/25 backdrop-blur">
             <Sparkles className="h-4 w-4" aria-hidden="true" />
             Premium event planning workspace
           </div>
-          <h1 className="mt-7 max-w-4xl font-serif text-5xl font-semibold leading-[1.02] text-foreground sm:text-6xl lg:text-7xl">
+          <h1 className="mt-7 max-w-4xl font-serif text-5xl font-semibold leading-[1.02] text-white sm:text-6xl lg:text-7xl">
             Plan unforgettable events with themes, vendors, budgets, and timelines.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
             Eventure is a colorful SaaS concept for discovering luxury event styles,
             organizing planning details, estimating budgets, and sending polished booking inquiries.
           </p>
@@ -37,9 +37,9 @@ export function Hero() {
 
           <div className="mt-10 grid max-w-xl grid-cols-3 gap-3">
             {heroStats.map((stat) => (
-              <div key={stat.label} className="rounded-3xl bg-white/75 p-4 ring-1 ring-purple/10">
-                <p className="font-serif text-3xl font-semibold text-foreground">{stat.value}</p>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+              <div key={stat.label} className="rounded-3xl bg-white/15 p-4 ring-1 ring-white/20 backdrop-blur">
+                <p className="font-serif text-3xl font-semibold text-white">{stat.value}</p>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/70">
                   {stat.label}
                 </p>
               </div>
