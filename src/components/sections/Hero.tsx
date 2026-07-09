@@ -42,27 +42,27 @@ export function Hero() {
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <ButtonLink
               href="/contact"
-              size="lg"
+              size="md"
               showArrow
-              className="bg-rose-flame text-white shadow-[0_18px_45px_rgba(242,75,106,0.35)] hover:bg-crimson"
+              className="h-11 px-5 text-sm bg-rose-flame text-white shadow-[0_18px_45px_rgba(242,75,106,0.35)] hover:bg-crimson sm:px-6"
             >
               Start planning
             </ButtonLink>
             <ButtonLink
               href="/themes"
               variant="secondary"
-              size="lg"
-              className="bg-white/90 text-foreground ring-white/35 hover:bg-white"
+              size="md"
+              className="h-11 px-5 text-sm bg-white/90 text-foreground ring-white/35 hover:bg-white sm:px-6"
             >
               Explore themes
             </ButtonLink>
           </div>
 
-          <div className="mx-auto mt-8 grid max-w-xl grid-cols-3 gap-3">
+          <div className="mx-auto mt-7 grid max-w-lg grid-cols-3 gap-2.5">
             {heroStats.map((stat) => (
-              <div key={stat.label} className="rounded-3xl bg-white/14 px-3 py-4 ring-1 ring-white/18 backdrop-blur sm:p-4">
-                <p className="font-serif text-2xl font-semibold text-white sm:text-3xl">{stat.value}</p>
-                <p className="mt-1 text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-white/70 sm:text-xs sm:tracking-[0.16em]">
+              <div key={stat.label} className="rounded-2xl bg-white/14 px-2.5 py-3 ring-1 ring-white/18 backdrop-blur sm:px-3 sm:py-3.5">
+                <p className="font-serif text-xl font-semibold text-white sm:text-2xl">{stat.value}</p>
+                <p className="mt-1 text-[0.56rem] font-semibold uppercase tracking-[0.12em] text-white/70 sm:text-[0.68rem] sm:tracking-[0.14em]">
                   {stat.label}
                 </p>
               </div>
