@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AnniversaryCollections } from "@/components/sections/AnniversaryCollections";
 import { BabyShowerCollections } from "@/components/sections/BabyShowerCollections";
 import { BirthdayCollections } from "@/components/sections/BirthdayCollections";
 import { CorporateCollections } from "@/components/sections/CorporateCollections";
@@ -21,6 +22,7 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
     selectedCategory === "baby-showers" ||
     selectedCategory === "baby-shower" ||
     selectedCategory === "babyshower";
+  const isAnniversaryCategory = selectedCategory === "anniversaries" || selectedCategory === "anniversary";
   const isCorporateCategory = selectedCategory === "corporate" || selectedCategory === "corporate-events";
 
   if (isWeddingCategory) {
@@ -118,6 +120,31 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
           </Container>
         </section>
         <BabyShowerCollections />
+      </>
+    );
+  }
+
+  if (isAnniversaryCategory) {
+    return (
+      <>
+        <section className="relative overflow-hidden bg-foreground pt-32 pb-20 text-white sm:pt-36 sm:pb-24">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(242,75,106,0.36),transparent_34%),linear-gradient(135deg,#670626_0%,#8C031C_40%,#2C1E1E_100%)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-foreground/12 via-transparent to-foreground/36" aria-hidden="true" />
+          <Container className="relative z-10">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-white/80">
+                Anniversary collections
+              </p>
+              <h1 className="font-serif text-3xl font-semibold leading-tight text-white [text-shadow:0_8px_36px_rgba(0,0,0,0.35)] sm:text-4xl lg:text-5xl">
+                Explore anniversary ideas for romantic dinners, milestones, and golden evenings.
+              </h1>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/82 sm:text-lg">
+                Browse anniversary inspiration with meaningful details, warm ambience, elegant decor, and memory-led celebration moments.
+              </p>
+            </div>
+          </Container>
+        </section>
+        <AnniversaryCollections />
       </>
     );
   }
