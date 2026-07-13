@@ -1,14 +1,58 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { AnniversaryCollections } from "@/components/sections/AnniversaryCollections";
 import { BabyShowerCollections } from "@/components/sections/BabyShowerCollections";
 import { BirthdayCollections } from "@/components/sections/BirthdayCollections";
 import { CorporateCollections } from "@/components/sections/CorporateCollections";
 import { EngagementCollections } from "@/components/sections/EngagementCollections";
-import { ThemeShowcase } from "@/components/sections/ThemeShowcase";
 import { WeddingCollections } from "@/components/sections/WeddingCollections";
 import { Container } from "@/components/ui/Container";
-import { PageHero } from "@/components/ui/PageHero";
-import { eventThemes } from "@/lib/site-data";
+
+const themeCategories = [
+  {
+    title: "Weddings",
+    href: "/themes?category=weddings",
+    image: "/wedding-hero-section.png",
+    description: "Dholki, mayoon, mehndi, nikkah, barat, and walima inspiration.",
+    accent: "from-crimson to-rose-flame",
+  },
+  {
+    title: "Birthdays",
+    href: "/themes?category=birthdays",
+    image: "/birthday-hero-section.png",
+    description: "Indoor parties, themed decor, character setups, and cake moments.",
+    accent: "from-rose-flame to-spiced-orange",
+  },
+  {
+    title: "Engagements",
+    href: "/themes?category=engagements",
+    image: "/engagement-hero-section.png",
+    description: "Proposal styling, ring moments, family details, and floral soirees.",
+    accent: "from-crimson to-coral-blush",
+  },
+  {
+    title: "Baby Showers",
+    href: "/themes?category=baby-showers",
+    image: "/babyshower-hero-section.png",
+    description: "Soft decor, brunch setups, welcome signs, and family-friendly details.",
+    accent: "from-olive-grove to-coral-blush",
+  },
+  {
+    title: "Anniversaries",
+    href: "/themes?category=anniversaries",
+    image: "/anniversary-hero-section.png",
+    description: "Romantic dinners, milestone moments, memory walls, and golden evenings.",
+    accent: "from-spiced-orange to-crimson",
+  },
+  {
+    title: "Corporate",
+    href: "/themes?category=corporate",
+    image: "/corporate-hero-section.PNG",
+    description: "Launches, galas, team events, branded staging, and networking flow.",
+    accent: "from-foreground to-rose-flame",
+  },
+];
 
 type ThemesPageProps = {
   searchParams: Promise<{ category?: string | string[] }>;
@@ -227,19 +271,72 @@ export default async function ThemesPage({ searchParams }: ThemesPageProps) {
 
   return (
     <>
-      <PageHero
-        eyebrow="Event themes"
-        title="Collections with mood, palette, budget, and event context."
-        description="Themes are modeled for CMS editing, filtering, and detail pages. They are the visual discovery layer of the SaaS."
-      />
-      <ThemeShowcase limit={eventThemes.length} />
-      <section className="bg-background py-16">
+      <section className="relative overflow-hidden bg-foreground pt-32 pb-20 text-white sm:pt-36 sm:pb-24">
+        <Image
+          src="/hero-event-artwork.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/74 via-foreground/44 to-foreground/82" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/82 via-foreground/46 to-foreground/24" aria-hidden="true" />
+
+        <Container className="relative z-10">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-white/80">
+              Event themes
+            </p>
+            <h1 className="font-serif text-3xl font-semibold leading-tight text-white [text-shadow:0_8px_36px_rgba(0,0,0,0.35)] sm:text-4xl lg:text-5xl">
+              Pick a celebration style and explore the full theme board.
+            </h1>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/82 sm:text-lg">
+              Browse local theme collections for weddings, birthdays, engagements, baby showers, anniversaries, and corporate events.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-background py-16 sm:py-20">
         <Container>
-          <div className="grid gap-4 rounded-[2rem] bg-white p-6 ring-1 ring-purple/10 md:grid-cols-4">
-            {["Mood filters", "Palette swatches", "Budget bands", "Saved boards"].map((item) => (
-              <div key={item} className="rounded-2xl bg-background p-4 text-center text-sm font-bold text-foreground">
-                {item}
-              </div>
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {themeCategories.map((theme) => (
+              <Link
+                key={theme.title}
+                href={theme.href}
+                className="group relative block min-h-[360px] overflow-hidden rounded-[1.75rem] bg-foreground shadow-[0_24px_70px_rgba(140,3,28,0.12)] ring-1 ring-[rgba(140,3,28,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_90px_rgba(140,3,28,0.18)]"
+              >
+                <Image
+                  src={theme.image}
+                  alt={`${theme.title} theme inspiration`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  className="object-cover opacity-90 transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/30 to-transparent" />
+                <div className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${theme.accent}`} />
+
+                <div className="relative z-10 flex min-h-[360px] flex-col justify-between p-5 text-white">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-foreground backdrop-blur">
+                      Theme
+                    </span>
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/16 ring-1 ring-white/20 backdrop-blur">
+                      <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
+                    </span>
+                  </div>
+
+                  <div>
+                    <h2 className="font-serif text-3xl font-semibold">{theme.title}</h2>
+                    <p className="mt-3 max-w-sm text-sm leading-7 text-white/82">{theme.description}</p>
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold">
+                      View collection
+                      <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </Container>
